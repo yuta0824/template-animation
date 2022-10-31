@@ -1,0 +1,9 @@
+@use "../global" as g;
+
+.c-sectionTitle {
+	color: #fff;
+	font-size: 45px;
+	@include g.mq("md") {
+		font-size: 60px;
+	}
+}

@@ -1,0 +1,20 @@
+@use '../global' as g;
+
+.p-section {
+}
+
+.p-section__wrap {
+	margin-top: auto;
+}
+
+.p-section__read {
+	font-size: 18px;
+	
+	@include g.mq("md") {
+		font-size: 22px;
+	}
+}
+
+.p-section__btn {
+	margin-top: 15px;
+}

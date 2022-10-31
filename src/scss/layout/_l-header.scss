@@ -1,0 +1,25 @@
+@use "../global" as g;
+
+.l-header {
+	box-shadow: g.$shadow;
+	border-bottom: 1px solid #000;
+	height: g.$header-height-sp;
+	background: #000;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: map-get(g.$layer, header);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include g.mq("md") {
+		height: g.$header-height-pc;
+	}
+}
+
+.l-header__logo {
+	font-size: 40px;
+}

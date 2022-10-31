@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+// foundation
+//--------------------------
+@use "foundation";
+
+// layout
+//--------------------------
+@use "./layout/**/*.scss";
+
+// component
+//--------------------------
+@use "./component/**/*.scss";
+
+// project
+//--------------------------
+@use "./project/**/*.scss";
+
+// utility
+//--------------------------
+@use "./utility/**/*.scss";
+

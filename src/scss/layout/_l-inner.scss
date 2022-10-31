@@ -1,0 +1,17 @@
+@use "../global" as g;
+
+.l-inner {
+	height: 100%;
+  margin: 0 auto;
+  padding-left: g.$pd-sp;
+  padding-right: g.$pd-sp;
+  width: 100%;
+	display: flex;
+	flex-direction: column;
+
+  @include g.mq("md") {
+    padding-left: g.$pd-pc;
+    padding-right: g.$pd-pc;
+		max-width: g.$layout-width-inner + g.$pd-pc * 2;
+  }
+}

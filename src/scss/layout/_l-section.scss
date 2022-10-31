@@ -1,0 +1,22 @@
+@use "../global" as g;
+
+.l-section {
+	height: calc(100vh - g.$header-height-sp);
+	padding: 100px 0;
+
+	@include g.mq("md") {
+		height: calc(100vh - g.$header-height-pc);
+	}
+
+	&:first-of-type {
+		margin-top: g.$header-height-sp;
+
+		@include g.mq("md") {
+			margin-top: g.$header-height-pc;
+		}
+	}
+
+	&:nth-child(2n) {
+		background: rgb(94, 94, 94);
+	}
+}

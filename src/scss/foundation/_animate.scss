@@ -1,0 +1,125 @@
+// アニメーションの定義
+//--------------------------
+@keyframes startFadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.anm {
+	opacity: 0;
+	&.is-animated {
+		animation: fadeIn 1.5s forwards;
+	}
+}
+
+.anm-up {
+	opacity: 0;
+	transform: translateY(30px);
+	&.is-animated {
+		animation: fadeInUp 1.5s forwards;
+	}
+}
+
+.anm-left {
+	opacity: 0;
+	transform: translateX(30px);
+	&.is-animated {
+		animation: fadeInLeft 1.5s forwards;
+	}
+}
+
+.anm-right {
+	opacity: 0;
+	transform: translateX(-30px);
+	&.is-animated {
+		animation: fadeInRight 1.5s forwards;
+	}
+}
+
+.anm-list > * {
+	opacity: 0;
+	transform: translateY(30px);
+
+	&.is-animated {
+		animation: fadeInUp 2.8s forwards;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(30px);
+		transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+		transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeOutUp {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(-20px);
+		transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+	}
+}
+
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(30px);
+		transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(-30px);
+		transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
