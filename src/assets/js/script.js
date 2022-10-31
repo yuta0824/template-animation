@@ -9,9 +9,9 @@ jQuery(window).on("load", function () {
 
 	function switchViewport() {
 		const value =
-			window.outerWidth > 375 ?
-			"width=device-width,initial-scale=1" :
-			"width=375";
+			window.outerWidth > 375
+				? "width=device-width,initial-scale=1"
+				: "width=375";
 		if (viewport.getAttribute("content") !== value) {
 			viewport.setAttribute("content", value);
 		}
@@ -48,14 +48,15 @@ jQuery('.anm, [class*="anm-"], .anm-list > *').each(function () {
 jQuery.fn.anmDelay = function (options) {
 	const elements = this;
 	const defaults = {
-		delay: 0.2,
-		property: "animation-delay",
+		delay: 0.3,
+		property: "transition-delay",
 	};
 	const setting = jQuery.extend(defaults, options);
 	const index = elements.index();
-	const time = index * setting.delay;
+	const time = index * setting.delay + 0.1;
 	elements.css(setting.property, time + "s");
 };
 jQuery(".anm-list > *").each(function () {
 	jQuery(this).anmDelay();
 });
+

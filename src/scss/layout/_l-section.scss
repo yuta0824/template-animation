@@ -3,6 +3,7 @@
 .l-section {
 	height: calc(100vh - g.$header-height-sp);
 	padding: 100px 0;
+	overflow-x: hidden;
 
 	@include g.mq("md") {
 		height: calc(100vh - g.$header-height-pc);

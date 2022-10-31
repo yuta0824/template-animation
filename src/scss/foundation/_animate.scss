@@ -1,125 +1,58 @@
 // アニメーションの定義
 //--------------------------
-@keyframes startFadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
 .anm {
 	opacity: 0;
+	transition: opacity 0.4s ease-out;
+	transition-delay: 0.1s;
+
 	&.is-animated {
-		animation: fadeIn 1.5s forwards;
+		opacity: 1;
 	}
 }
 
 .anm-up {
 	opacity: 0;
-	transform: translateY(30px);
+	transform: translateY(60px);
+	transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+	transition-delay: 0.1s;
+
 	&.is-animated {
-		animation: fadeInUp 1.5s forwards;
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
 .anm-left {
 	opacity: 0;
-	transform: translateX(30px);
+	transform: translateX(60px);
+	transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+	transition-delay: 0.1s;
+
 	&.is-animated {
-		animation: fadeInLeft 1.5s forwards;
+		opacity: 1;
+		transform: translateX(0);
 	}
 }
 
 .anm-right {
 	opacity: 0;
-	transform: translateX(-30px);
+	transform: translateX(-60px);
+	transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+	transition-delay: 0.1s;
+
 	&.is-animated {
-		animation: fadeInRight 1.5s forwards;
+		opacity: 1;
+		transform: translateX(0);
 	}
 }
 
 .anm-list > * {
 	opacity: 0;
-	transform: translateY(30px);
+	transform: translateY(60px);
+	transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 
 	&.is-animated {
-		animation: fadeInUp 2.8s forwards;
-	}
-}
-
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes fadeInUp {
-	0% {
-		opacity: 0;
-		transform: translateY(30px);
-		transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
-	}
-
-	100% {
 		opacity: 1;
 		transform: translateY(0);
-	}
-}
-
-@keyframes fadeInDown {
-	0% {
-		opacity: 0;
-		transform: translateY(-20px);
-		transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-@keyframes fadeOutUp {
-	0% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	100% {
-		opacity: 0;
-		transform: translateY(-20px);
-		transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
-	}
-}
-
-@keyframes fadeInLeft {
-	0% {
-		opacity: 0;
-		transform: translateX(30px);
-		transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-@keyframes fadeInRight {
-	0% {
-		opacity: 0;
-		transform: translateX(-30px);
-		transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
 	}
 }
