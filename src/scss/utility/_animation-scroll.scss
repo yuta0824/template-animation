@@ -65,15 +65,15 @@
 // オプション
 //---------------------
 @for $i from 0 through 50 {
-	.u-anm-delay#{$i*100}ms {
+	.u-anm--delay#{$i*100}ms {
 		transition-delay: #{$i * 0.1}s;
 	}
 
-	.u-anm-speed#{$i*100}ms {
+	.u-anm--speed#{$i*100}ms {
 		transition: opacity #{$i * 0.1}s ease-out, transform #{$i * 0.1}s ease-out;
 	}
 
-	.u-anm-list-speed#{$i*100}ms > * {
+	.u-anm-list--speed#{$i*100}ms > * {
 		transition: opacity #{$i * 0.1}s ease-out, transform #{$i * 0.1}s ease-out;
 	}
 }

@@ -9,7 +9,8 @@
 
 .p-section__read {
 	font-size: 18px;
-	
+	display: inline-block;
+
 	@include g.mq("md") {
 		font-size: 22px;
 	}
