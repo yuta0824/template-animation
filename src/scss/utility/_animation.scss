@@ -1,8 +1,9 @@
 // アニメーションの定義
 //--------------------------
-.u-anm {
+//フェード
+.u-anm-fade {
 	opacity: 0;
-	transition: opacity 0.4s ease-out;
+	transition: opacity 1.5s ease-out;
 	transition-delay: 0.1s;
 
 	&.is-animated {
@@ -10,6 +11,7 @@
 	}
 }
 
+//フェードアップ
 .u-anm-up {
 	opacity: 0;
 	transform: translateY(60px);
@@ -22,6 +24,7 @@
 	}
 }
 
+//フェードレフト
 .u-anm-left {
 	opacity: 0;
 	transform: translateX(60px);
@@ -34,6 +37,7 @@
 	}
 }
 
+//フェードライト
 .u-anm-right {
 	opacity: 0;
 	transform: translateX(-60px);
@@ -46,6 +50,7 @@
 	}
 }
 
+//フェードアップリスト
 .u-anm-list > * {
 	opacity: 0;
 	transform: translateY(60px);
@@ -54,5 +59,21 @@
 	&.is-animated {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+
+// オプション
+//---------------------
+@for $i from 0 through 50 {
+	.u-anm-delay#{$i*100}ms {
+		transition-delay: #{$i * 0.1}s;
+	}
+
+	.u-anm-speed#{$i*100}ms {
+		transition: opacity #{$i * 0.1}s ease-out, transform #{$i * 0.1}s ease-out;
+	}
+
+	.u-anm-list-speed#{$i*100}ms > * {
+		transition: opacity #{$i * 0.1}s ease-out, transform #{$i * 0.1}s ease-out;
 	}
 }

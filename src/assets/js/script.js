@@ -42,7 +42,7 @@ jQuery.fn.acs = function (options) {
 		}
 	}
 };
-jQuery('.anm, [class*="anm-"], .anm-list > *').each(function () {
+jQuery('[class*="u-anm-"], .u-anm-list > *').each(function () {
 	jQuery(this).acs();
 });
 jQuery.fn.anmDelay = function (options) {
@@ -56,7 +56,7 @@ jQuery.fn.anmDelay = function (options) {
 	const time = index * setting.delay + 0.1;
 	elements.css(setting.property, time + "s");
 };
-jQuery(".anm-list > *").each(function () {
+jQuery(".u-anm-list > *").each(function () {
 	jQuery(this).anmDelay();
 });
 
