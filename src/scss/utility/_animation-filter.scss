@@ -10,7 +10,7 @@
 		right: 0;
 		width: 101%;
 		height: 100%;
-		background: rgba($color: transparent, $alpha: 0.9);
+		background: rgba($color: g.$cr-bg, $alpha: 0.9);
 		transition: width 2s ease-out;
 		transition-delay: 0.1s;
 	}
@@ -25,15 +25,15 @@
 // オプション
 //---------------------
 @for $i from 0 through 50 {
-	.u-anm-filter--delay#{$i*100}ms {
+	.u-anm-filter--speed#{$i*100}ms {
 		&::after {
-			transition-delay: #{$i * 0.1}s;
+			transition-duration: #{$i * 0.1}s !important;
 		}
 	}
 
-	.u-anm-filter--speed#{$i*100}ms {
+	.u-anm-filter--delay#{$i*100}ms {
 		&::after {
-			transition: width #{$i * 0.1}s ease-out;
+			transition-delay: #{$i * 0.1}s !important;
 		}
 	}
 }
